@@ -3,7 +3,7 @@
 #### HTML CODE  
 >CREATED A CONTAINER TO KEEP OUR BUTTONS AND THE SCREEN OF THE CALCULATOR<br />
 >THE CONTAINER IS DIVIDED IN TWO PARTS-i)INPUT <br />
->                                      ii)OUTPUT
+>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii)OUTPUT<br />
 >THE INPUT CONTAINS ALL THE BUTTONS OF THE CALCULATOR<br />
 >THE OUTPUT CONTAINS THE OUTPUT SCREEN<br />
 <br />
