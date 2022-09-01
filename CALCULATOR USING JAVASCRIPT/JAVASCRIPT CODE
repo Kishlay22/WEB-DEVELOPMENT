@@ -1,0 +1,18 @@
+let inputnum=document.getElementById('res');
+        function display(e)
+        {inputnum.value+=e;}
+
+        function claculate()
+        {try{
+            inputnum.value=eval(inputnum.value);
+            }
+         catch(e){
+               alert("invalid command");
+             }
+         }
+        
+        function Clear()
+        {inputnum.value="";}
+
+        function del()
+        {inputnum.value=inputnum.value.slice(0,-1);}
