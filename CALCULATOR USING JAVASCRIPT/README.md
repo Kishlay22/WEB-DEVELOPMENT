@@ -6,7 +6,7 @@
 >&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;ii)OUTPUT<br />
 >THE INPUT CONTAINS ALL THE BUTTONS OF THE CALCULATOR<br />
 >THE OUTPUT CONTAINS THE OUTPUT SCREEN<br />
-<br />
+
 ##### CSS CODE 
 >WITH THE GRID VIEW OF THE THE CONTAINER,PLACED THE BUTTONS IN THERE RIGTH PLACES.<br />
 >ADDED CSS STYLING TO THE BUTTONS<br />
