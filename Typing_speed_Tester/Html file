@@ -1,0 +1,12 @@
+ <div class="mainDiv">
+        <h1>Welcome to Typing Speed Test</h1>
+        <br>
+        <div class="centerDiv">
+            
+            <h2 id="sentence"></h2>
+           <br>
+            <textarea id="write" cols="100" rows="10" placeholder="Write Here"></textarea>
+            <br><br>
+            <button id="btn">Start</button>
+        </div>
+    </div>
