@@ -1,0 +1,72 @@
+  *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Combo', cursive;
+         }
+        
+        .mainDiv{
+            max-width: 95%;
+            max-height: 95%;
+            margin: 3% 5% ;
+            width: 90%;
+            height: 90vh;
+            position: relative;
+            background-color: rgb(94, 229, 244);
+            text-align: center;
+            border: none;
+            border-radius: 20px;
+        }
+        .centerDiv{
+           max-height: 95%;
+            position: relative;
+            top: 40%;
+            left:50% ;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+        
+        h1{
+            background-color: crimson;
+            border: none;
+            border-radius: 20px;  
+            margin-left: 2%;
+            margin-right: 2%;    
+            padding: 2%; 
+            box-shadow:inset 5px 5px 10px rgb(219, 219, 219); }
+        
+        h2{margin-top: 20px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        textarea{
+            position: relative;
+            max-width: 95%;
+            color: rgb(41, 31, 83);
+            background-color: rgb(255, 255, 255);
+            border: .7rem solid rgb(186, 186, 186);
+            border-radius: 1rem;
+            margin: 2;
+            resize: none;
+            font-size:1.5rem;
+            font-weight: 500;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            box-shadow:inset 5px 5px 10px rgb(125, 124, 124);
+        }
+        #btn{
+            padding: 1rem 3rem;
+            border: none;
+            color: rgb(244, 0, 0);
+            font-weight:600;
+            background-color: chartreuse;
+            border-radius:6px ;
+            font-size: 1rem;
+            box-shadow: 0px 0px 15px rgb(153, 153, 172), 5px 5px 10px rgb(101, 101, 101);
+            cursor: pointer;
+        }
+        #btn:hover{
+            background-color: rgb(247, 147, 147);
+            font-size: larger;
+            color: aliceblue;
+            transition-duration: 1s;
+          }
