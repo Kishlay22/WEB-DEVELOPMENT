@@ -1,0 +1,85 @@
+ <script>
+      const setOfWords=[" A dependent clause is not a complete sentence. It must be attached to an independent clause to become complete. This is also known as a subordinate clause.",
+      "A complex sentence contains at least one independent clause and at least one dependent clause. Dependent clauses can refer to the subject (who, which) the sequence/time (since, while), or the causal elements (because, if) of the independent clause.",
+      "There are many types of sentences, all with different structures and complexities. In its most basic form, a sentence is made up of a subject and predicate, which is the verb and the words that follow. But no matter how simple or complex, a sentence consists of words. Words in a sentence are what make it come alive and make sense.",
+      "Stars are the most widely recognized astronomical objects, and represent the most fundamental building blocks of galaxies. The age, distribution, and composition of the stars in a galaxy trace the history, dynamics, and evolution of that galaxy.",
+      "The brightest and largest object in our night sky, the Moon makes Earth a more livable planet by moderating our home planet's wobble on its axis, leading to a relatively stable climate. It also causes tides, creating a rhythm that has guided humans for thousands of years.",
+      "The Sun is the star at the center of the Solar System. It is a nearly perfect ball of hot plasma, heated to incandescence by nuclear fusion reactions in its core, radiating the energy mainly as light, ultraviolet, and infrared radiation. It is the most important source of energy for life on Earth.",
+      "Pluto is a dwarf planet in the Kuiper Belt, a donut-shaped region of icy bodies beyond the orbit of Neptune. There may be millions of these icy objects, collectively referred to as Kuiper Belt objects or trans-Neptunian objects , in this distant region of our solar system.",
+      "A paragraph is a series of sentences that are organized and coherent, and are all related to a single topic. Almost every piece of writing you do that is longer than a few sentences should be organized into paragraphs.",
+      "Neptune is the eighth planet from the Sun and the farthest known solar planet. In the Solar System, it is the fourth-largest planet by diameter, the third-most-massive planet, and the densest giant planet.",
+      "Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury. In the English language, Mars is named for the Roman god of war.",
+      "Venus is the second planet from the Sun and is named after the Roman goddess of love and beauty. As the brightest natural object in Earth's night sky after the Moon, Venus can cast shadows and can be visible to the naked eye in broad daylight."]; 
+          
+         const message=document.getElementById('sentence');
+         const write=document.getElementById('write');
+         const but=document.getElementById('btn');
+         let starttime,endtime;
+         const welcome=document.getElementsByTagName('h1');        
+         const playgame=()=>{
+            let randomno = Math.floor(Math.random()*setOfWords.length);
+            message.innerText=setOfWords[randomno];
+            let date=new Date();
+            starttime=date.getTime();
+         }
+         
+        
+          const endplay=()=>{
+             let date=new Date();
+             endtime=date.getTime();
+             let totaltime=(endtime-starttime)/1000;
+             console.log(totaltime);
+
+             let totalstr=write.value;
+             let wordcount=wordCounter(totalstr);
+             
+             let speed=Math.round((wordcount/totaltime)*60);
+             let finalmsg="Your typing speed is "+speed+" words per minutes";
+             
+             finalmsg+=comparewords(message.innerText,totalstr);
+             message.innerText=finalmsg;
+
+          }
+          
+          const comparewords=(str1,str2)=>{
+            let word1=str1.split(" ");
+            let word2=str2.split(" ");
+            let cnt=0;
+
+            word1.forEach(function(item,index)
+            {
+               if(item==word2[index]) 
+                   { cnt++;
+                    
+                   }
+                    
+            })
+            let error=(word1.length-cnt);
+            return ("\nTotal no. of words = " + word1.length +"\nTotal corrected words = "+cnt+"\nTotal no. of errors = "+error);
+          }
+          const wordCounter=(str)=>{
+            let response=str.split(" ").length;
+            console.log(response);
+            return response;
+         }
+
+         but.addEventListener('click',function(){
+            if(this.innerHTML=="Start")
+            {write.innerText="";
+             write.disabled =false;
+             but.innerHTML="Done";   
+             playgame();
+            }
+            else
+            {if(this.innerText=='Done')
+              {
+                write.disabled=true;
+                but.innerHTML="Start"; 
+                endplay();
+              }
+
+            }
+
+
+         })
+    </script>
